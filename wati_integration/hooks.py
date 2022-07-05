@@ -97,6 +97,17 @@ app_license = "MIT"
 #	}
 # }
 
+doc_events = {
+    "*": {
+        "on_submit": "wati_integration.wati_integration.doctype.wati_message_rule.wati_message_rule.send_message_for_event",
+        "after_insert": "wati_integration.wati_integration.doctype.wati_message_rule.wati_message_rule.send_message_for_event",
+        "on_cancel": "wati_integration.wati_integration.doctype.wati_message_rule.wati_message_rule.send_message_for_event",
+        "after_save": "wati_integration.wati_integration.doctype.wati_message_rule.wati_message_rule.send_message_for_event",
+        "on_change": "wati_integration.wati_integration.doctype.wati_message_rule.wati_message_rule.send_message_for_event"
+    }
+}
+
+
 # Scheduled Tasks
 # ---------------
 

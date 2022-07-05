@@ -1,0 +1,39 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-07-06 01:58:47.904322",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "template_variable",
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "template_variable",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Template Variable",
+   "reqd": 1
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Value",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-07-06 02:06:35.751823",
+ "modified_by": "Administrator",
+ "module": "Wati Integration",
+ "name": "Send Message Variables",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

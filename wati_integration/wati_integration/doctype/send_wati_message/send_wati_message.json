@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Message.####",
+ "creation": "2022-07-06 01:54:08.173337",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "message_send_to",
+  "column_break_2",
+  "when_to_send",
+  "section_break_4",
+  "group",
+  "message_details_section",
+  "message_template",
+  "message",
+  "column_break_9",
+  "send_message_variables",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "message_send_to",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Message Send To",
+   "options": "\nAll Supplier\nAll Customer\nAll Employee\nAll Lead\nGroup",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "when_to_send",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "When To Send",
+   "options": "\nNow\nSchedule",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.message_send_to==\"Group\";",
+   "fieldname": "group",
+   "fieldtype": "Link",
+   "label": "Group",
+   "mandatory_depends_on": "eval:doc.message_send_to==\"Group\";",
+   "options": "Wati Group"
+  },
+  {
+   "fieldname": "message_details_section",
+   "fieldtype": "Section Break",
+   "label": "Message Details"
+  },
+  {
+   "fieldname": "message_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Message Template",
+   "options": "Message Template",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "message_template.template_message",
+   "fieldname": "message",
+   "fieldtype": "Small Text",
+   "label": "Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "send_message_variables",
+   "fieldtype": "Table",
+   "label": "Send Message Variables",
+   "options": "Send Message Variables"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Send Wati Message",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-07-06 02:41:43.462072",
+ "modified_by": "Administrator",
+ "module": "Wati Integration",
+ "name": "Send Wati Message",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
