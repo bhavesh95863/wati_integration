@@ -35,6 +35,7 @@
   {
    "fieldname": "document",
    "fieldtype": "Read Only",
+   "in_list_view": 1,
    "label": "Document"
   },
   {
@@ -44,6 +45,7 @@
   {
    "fieldname": "ref_doctype",
    "fieldtype": "Read Only",
+   "in_list_view": 1,
    "label": "Doctype"
   },
   {
@@ -94,7 +96,7 @@
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-07-05 20:09:37.879509",
+ "modified": "2022-07-07 01:59:12.719280",
  "modified_by": "Administrator",
  "module": "Wati Integration",
  "name": "Wati Message Log",

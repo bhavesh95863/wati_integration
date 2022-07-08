@@ -35,10 +35,10 @@ def cron_job_for_schedule_message():
 	from_time = now_datetime()
 	to_time = now_datetime() + timedelta(minutes = 1)
 	send_sms_data = frappe.db.sql("""SELECT name
-FROM `tabSend SMS`
+FROM `tabSend Wati Message`
 WHERE docstatus=1
   AND sent=0
-  AND schedule_date_and_time BETWEEN %s AND %s""",(from_time,to_time),as_dict=1)
+  AND schedule_date_and_time < %s""",from_time,as_dict=1)
 	# filters = [
 	# 	["docstatus","=",1],
 	# 	["sent","=",0],
@@ -51,9 +51,9 @@ WHERE docstatus=1
 
 def enqueue_send_message(send_sms_data):
 	for row in send_sms_data:
-		send_sms_doc = frappe.get_doc("Send SMS",row.name)
+		send_sms_doc = frappe.get_doc("Send Wati Message",row.name)
 		send_message(send_sms_doc)
-		frappe.db.set_value("Send SMS",row.name,"sent",1)
+		frappe.db.set_value("Send Wati Message",row.name,"sent",1)
 
 def send_message(doc):
 	if doc.message_send_to == "All Supplier":

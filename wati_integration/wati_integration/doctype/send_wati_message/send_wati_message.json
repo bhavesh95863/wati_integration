@@ -10,6 +10,8 @@
   "message_send_to",
   "column_break_2",
   "when_to_send",
+  "schedule_date_and_time",
+  "sent",
   "section_break_4",
   "group",
   "message_details_section",
@@ -90,12 +92,26 @@
    "options": "Send Wati Message",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "sent",
+   "fieldtype": "Check",
+   "label": "Sent",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.when_to_send==\"Schedule\";",
+   "fieldname": "schedule_date_and_time",
+   "fieldtype": "Datetime",
+   "label": "Schedule Date And Time"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-07-06 02:41:43.462072",
+ "modified": "2022-07-08 15:11:32.866710",
  "modified_by": "Administrator",
  "module": "Wati Integration",
  "name": "Send Wati Message",

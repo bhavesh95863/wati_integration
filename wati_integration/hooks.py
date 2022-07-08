@@ -129,6 +129,14 @@ doc_events = {
 # 	]
 # }
 
+scheduler_events = {
+	"cron": {
+		"* * * * *": [
+			"wati_integration.wati_integration.doctype.send_wati_message.send_wati_message.cron_job_for_schedule_message"
+		]
+	}
+}
+
 # Testing
 # -------
 
