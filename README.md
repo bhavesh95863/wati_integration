@@ -75,7 +75,7 @@
 
 <p>&nbsp;</p>
 
-<p><strong>How to set up?</strong></p>
+<!-- <p><strong>How to set up?</strong></p>
 
 <p>You need a URL, Whatsapp number, and token from the Wati portal.</p>
 
@@ -97,7 +97,7 @@
 
 <p style="list-style-type:decimal">&nbsp;</p>
 
-<p style="list-style-type:decimal">&nbsp;</p>
+<p style="list-style-type:decimal">&nbsp;</p> -->
 
 
 <h3>Documentation</h3>
